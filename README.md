@@ -6,7 +6,6 @@
 
 [![Email](https://img.shields.io/badge/Email-hamza.riadh.htb%40gmail.com-ea4335?style=flat-square&logo=gmail&logoColor=white)](mailto:hamza.riadh.htb@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Hamza_Hattab-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hamza-riadh-h-44a297345/)
-[![GitHub](https://img.shields.io/badge/GitHub-Hamza--HATTAB-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Hamza-HATTAB)
 
 *Computer Science Engineering student specializing in Artificial Intelligence at USTHB (Algiers). Focused on building deterministic reference monitors for autonomous agents, high-throughput speculative LLM serving on constrained hardware, and claim-level attributed multi-hop RAG architectures.*
 
@@ -84,13 +83,3 @@ Autonomous AI systems cannot be built with stochastic prompt engineering alone. 
 | **AI Security & Red-Teaming** | Information Flow Control (IFC), Dynamic Taint Tracking, Join Semi-Lattices, AST Policy Enforcement (`ast`, `sqlglot`, `bashlex`), PyRIT Mutations, AgentDojo Benchmarks, HMAC-SHA256 HITL Gating. |
 | **Backend & Infrastructure** | Python 3.11+, C++, FastAPI, Pydantic v2, Docker, Linux (Ubuntu/POSIX), Cloudflare Tunnels, Pytest (89+ Automated Regression Tests). |
 | **Frontend & Telemetry** | Next.js 14 LTS, TypeScript, Tailwind CSS, Dynamic SVG Lineage DAGs, WebSockets. |
-
----
-
-<div align="center">
-
-[![Email](https://img.shields.io/badge/Email-hamza.riadh.htb%40gmail.com-ea4335?style=flat-square&logo=gmail&logoColor=white)](mailto:hamza.riadh.htb@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Hamza_Hattab-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hamza-riadh-h-44a297345/)
-[![GitHub](https://img.shields.io/badge/GitHub-Hamza--HATTAB-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Hamza-HATTAB)
-
-</div>
