@@ -2,7 +2,7 @@
 
 AI Systems Engineer | Applied Machine Learning & Agent Infrastructure
 
-[LinkedIn](https://www.linkedin.com/in/hamza-riadh-h-44a297345/) · [GitHub](https://github.com/Hamza-HATTAB) · [Email](mailto:hhamzariadh@gmail.com)
+[hamza.riadh.htb@gmail.com](mailto:hamza.riadh.htb@gmail.com) · [linkedin.com/in/hamza-riadh-h-44a297345](https://www.linkedin.com/in/hamza-riadh-h-44a297345/) · [github.com/Hamza-HATTAB](https://github.com/Hamza-HATTAB)
 
 Computer Science Engineering student specializing in Artificial Intelligence at USTHB (Algiers). Focused on building deterministic reference monitors for autonomous agents, high-throughput speculative LLM serving on constrained hardware, and claim-level attributed multi-hop RAG architectures.
 
@@ -80,6 +80,6 @@ Claim-Level Decomposition, CPU DeBERTa-v3 Cross-Encoder Verification & 3-State S
 
 ## Contact
 
-* Email: [hhamzariadh@gmail.com](mailto:hhamzariadh@gmail.com)
+* Email: [hamza.riadh.htb@gmail.com](mailto:hamza.riadh.htb@gmail.com)
 * LinkedIn: [linkedin.com/in/hamza-riadh-h-44a297345](https://www.linkedin.com/in/hamza-riadh-h-44a297345/)
 * GitHub: [github.com/Hamza-HATTAB](https://github.com/Hamza-HATTAB)
