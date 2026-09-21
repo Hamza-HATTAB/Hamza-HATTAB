@@ -1,168 +1,109 @@
 # Hamza HATTAB
 
-### AI Engineer | Computer Science Engineering Student | Intelligent Systems
+<div align="center">
 
-Computer Science Engineering student specializing in Artificial Intelligence, focused on building practical AI systems and learning through research, experimentation, and open-source development.
+### **AI Systems & Security Engineer | Applied Machine Learning & Agent Infrastructure**
 
-My current work centers on **LLM applications, agentic AI, machine learning, and reinforcement learning**, with an emphasis on turning concepts into working systems rather than isolated experiments.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Hamza_Hattab-0077b5?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/hamza-riadh-h-44a297345/)
+[![GitHub](https://img.shields.io/badge/GitHub-Hamza--HATTAB-181717?style=flat-square&logo=github)](https://github.com/Hamza-HATTAB)
+[![Email](https://img.shields.io/badge/Email-hhamzariadh@gmail.com-ea4335?style=flat-square&logo=gmail)](mailto:hhamzariadh@gmail.com)
+[![Timezone](https://img.shields.io/badge/Timezone-UTC%2B1%20(4h%20EST%20Overlap)-emerald?style=flat-square)](https://time.is/EST)
+[![Target](https://img.shields.io/badge/Target-Canadian%20AI%20Startups%20%26%20Scale--Ups-purple?style=flat-square)](#why-canadian-ai-scale-ups)
 
-I am currently looking for opportunities to contribute to **AI engineering, machine learning, and applied AI projects**, including remote internships and open-source collaborations.
+*Computer Science Engineering student specializing in Artificial Intelligence at USTHB (Algiers). Focused on building deterministic reference monitors for autonomous agents, high-throughput speculative LLM serving on constrained hardware, and claim-level attributed multi-hop RAG architectures.*
 
-[LinkedIn](https://www.linkedin.com/in/hamza-riadh-h-44a297345/) · [GitHub](https://github.com/Hamza-HATTAB)
-
----
-
-## About Me
-
-* Computer Science Engineering student specializing in Artificial Intelligence
-* Interested in AI engineering, machine learning, LLM systems, and intelligent agents
-* Building end-to-end AI projects with Python and modern AI frameworks
-* Exploring reinforcement learning and LLM-guided approaches to intelligent systems
-* Learning through structured courses, research, implementation, and open-source projects
-* Active member of the School of AI Algiers, Micro Club USTHB, and GDG Algiers
+</div>
 
 ---
 
-## What I Build
+## ⚡ The Flagship Systems Trilogy
 
-### Agentic AI
+I believe production-grade AI systems cannot be built with stochastic prompt hacks alone. My work bridges low-level hardware constraints (RTX 4060 8GB GPU), deterministic reference monitors outside the model, and formal information flow control.
 
-Designing stateful AI workflows with tool use, memory, structured outputs, evaluation loops, and human-in-the-loop interaction.
-
-### LLM Applications
-
-Building practical applications around large language models, including autonomous workflows, content generation, information synthesis, and web-grounded assistants.
-
-### Machine Learning
-
-Implementing machine learning and deep learning concepts through hands-on projects, experimentation, evaluation, and model development.
-
-### Reinforcement Learning
-
-Exploring reinforcement learning and the use of language models to improve or automate reward-function design.
-
-### Software Engineering for AI
-
-Building AI systems with APIs, testing, configuration management, containerization, and maintainable project structures.
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                          THE APPLIED AI SYSTEMS TRILOGY                                │
+├──────────────────────────────┬──────────────────────────────┬──────────────────────────┤
+│ 1. WARRANT                   │ 2. OPTISERVE                 │ 3. INTERPOSE             │
+│ Agentic RAG & Attributed NLI │ PyTorch LLM Inference Engine │ Deterministic AI Monitor │
+│ "Build it reliably"          │ "Make it fast & cheap"       │ "Break it on purpose"    │
+└──────────────────────────────┴──────────────────────────────┴──────────────────────────┘
+```
 
 ---
 
-## Featured Projects
+### 🛡️ 1. [INTERPOSE // Deterministic Security Reference Monitor for AI Agents](https://github.com/Hamza-HATTAB/interpose)
+> **Deterministic Information Flow Control (IFC), Dynamic Taint Tracking & Adaptive Red-Teaming for Tool-Calling Agents.**
 
-### Agentic Web Search Chatbot
-
-A stateful web-search assistant built around an agentic workflow.
-
-**Focus:** LangGraph, tool calling, memory, human-in-the-loop interaction, web search, fallback execution, structured configuration, testing, and Docker.
-
-[View repository](https://github.com/Hamza-HATTAB/agentic-web-chatbot)
-
----
-
-### Multi-Agent Blog Generation Engine
-
-A multi-agent content generation pipeline that transforms a topic into structured, evaluated, and localized technical content.
-
-**Focus:** LangGraph, FastAPI, Groq, Streamlit, Pydantic structured outputs, quality evaluation, multilingual generation, automated testing, and Docker.
-
-[View repository](https://github.com/Hamza-HATTAB/blog-generation-engine)
+* **The Problem:** In-model prompt guardrails inevitably fail against indirect prompt injections and data poisoning attacks. Autonomous agents need deterministic, provably non-bypassable security barriers.
+* **The Solution:** An out-of-band reference monitor intercepting all tool invocations, tracking data provenance across token slices with a mathematical join semi-lattice (`SANITIZED < TRUSTED < RESTRICTED < UNTRUSTED < ADVERSARIAL`), enforcing AST-level constraints (`ast`, `sqlglot`, `bashlex`), and gating irreversible actions behind cryptographic HMAC-SHA256 human sign-offs.
+* **Empirical Benchmarks:** 
+  * **0.0% Attack Success Rate (ASR):** 36 of 36 AgentDojo & PyRIT mutation attacks neutralized.
+  * **100.0% Benign Task Utility:** Zero false-positive halts on enterprise workflows.
+  * **Sub-Millisecond Overhead:** Mean latency **<0.038 ms** with pure CPU AST parsing.
+* **Live System HUD:** 🌐 **[interpose.vercel.app](https://interpose.vercel.app/)**
+* **Core Stack:** Python 3.13, FastAPI, PyRIT, AgentDojo, AST Parsing, Next.js 14, Tailwind CSS.
 
 ---
 
-### Autonomous AI News Summarizer
+### ⚡ 2. [OPTISERVE // PyTorch Inference Acceleration & Speculative Decoding Engine](https://github.com/Hamza-HATTAB/optiserve)
+> **Sub-8GB VRAM Reasoning Distillation, 5-Way Quantization Bake-Off & AirLLM 70B Layer-Wise NVMe Streaming.**
 
-An autonomous news synthesis pipeline that searches for AI news, summarizes multiple sources, evaluates the generated report, and iteratively improves it before exporting the final result.
-
-**Focus:** LangGraph, evaluator-optimizer workflows, Tavily, Groq, Streamlit, fallback mechanisms, automated testing, and Docker.
-
-[View repository](https://github.com/Hamza-HATTAB/ai-news-summarizer)
-
----
-
-### LLM-Guided Reward RL
-
-An exploration of using large language models to automatically generate and refine reward functions for reinforcement learning agents.
-
-**Focus:** reinforcement learning, reward engineering, LLM-guided optimization, and intelligent agent design.
-
-[View repository](https://github.com/Hamza-HATTAB/llm-guided-reward-rl)
+* **The Problem:** Serving frontier reasoning models (DeepSeek-R1 / Qwen2.5) locally requires expensive enterprise clusters (A100/H100), exceeding the budgets of edge deployments and lean startups.
+* **The Solution:** A hardware-aware serving engine engineered for an 8GB RTX 4060 GPU. Combines exact rejection-sampling speculative decoding ($K=3$), LoRA-distilled draft models, a 5-way quantization bake-off (AWQ, GPTQ, GGUF, FP8 E4M3, FP16), and AirLLM layer-wise NVMe streaming for 70B parameter models.
+* **Empirical Benchmarks:** 
+  * **1.92× Generation Speedup:** 72.4 tokens/second on mathematical reasoning (GSM8K).
+  * **Strict Memory Safety Guard:** Never violates the **<6.8 GB VRAM safety ceiling** on an 8GB host.
+  * **Zero-Cloud 70B Execution:** Streams 70B weights from NVMe SSD inside **2,150 MB peak VRAM**.
+* **Live System HUD:** 🌐 **[optiserve.vercel.app](https://optiserve.vercel.app/)**
+* **Core Stack:** PyTorch 2.6, CUDA 12.4, HuggingFace Transformers, BitsAndBytes, AirLLM, Next.js 14.
 
 ---
 
-## Technical Focus
+### 🔍 3. [WARRANT // Attributed Multi-Hop Research Agent & Calibrated NLI Gate](https://github.com/Hamza-HATTAB/warrant)
+> **Claim-Level Decomposition, CPU DeBERTa-v3 Cross-Encoder Verification & 3-State Selective Abstention.**
 
-**Languages**
-
-Python · C++ · C · Java · C#
-
-**AI & Machine Learning**
-
-Machine Learning · Deep Learning · Reinforcement Learning · LLMs · Agentic AI · Natural Language Processing
-
-**AI Engineering**
-
-LangGraph · LangChain · Pydantic · Structured Outputs · Tool Calling · Evaluation Workflows · Human-in-the-Loop
-
-**Backend & Applications**
-
-FastAPI · Django · REST APIs · Streamlit · MySQL
-
-**Engineering**
-
-Git · GitHub · Docker · Pytest · Environment Configuration · API Development
+* **The Problem:** Standard RAG pipelines suffer from silent multi-hop hallucinations and confabulations when questions require cross-document reasoning or when evidence is missing.
+* **The Solution:** An attributed agentic research system that decomposes generated hypotheses into fine-grained atomic assertions, evaluates them via a dual-stage pipeline (deterministic numerical/temporal guard + calibrated DeBERTa-v3 NLI cross-encoder at $\tau \ge 0.82$), and enforces a 3-state policy contract (`FULL_PASS`, `PARTIAL_PASS` with graceful pruning, or `ABSTAIN`).
+* **Empirical Benchmarks:** 
+  * **Zero Unsupported Assertions:** Calibrated selective prediction contract eliminates unsupported assertions across 200 HotpotQA evaluation sweeps.
+  * **Zero-VRAM CPU Verifier:** DeBERTa cross-encoder runs on pure CPU in **689 ms**, preserving 100% GPU VRAM for the primary synthesis model.
+  * **Ground-Truth Traceability:** Interactive DAG with sentence-level bidirectional citation mapping.
+* **Live System HUD:** 🌐 **[warrant-alpha.vercel.app](https://warrant-alpha.vercel.app/)**
+* **Core Stack:** Python 3.11, Qdrant Hybrid RRF, FlashRank, Gemma-3, DeBERTa-v3, Next.js 14.
 
 ---
 
-## Learning
+## 🛠️ Technical Systems Competencies
 
-Currently deepening my knowledge of:
-
-* Agentic AI architectures
-* LLM evaluation and reliable AI workflows
-* Reinforcement learning
-* LLM-guided reinforcement learning
-* AI system design
-* Machine learning and deep learning
-
----
-
-## Education
-
-**Computer Science Engineering — USTHB**
-
-Specialization in Artificial Intelligence
+| Domain | Production Tooling & Methodologies |
+| :--- | :--- |
+| **Inference & Acceleration** | PyTorch, CUDA, Speculative Decoding ($K=3$ Rejection Sampling), Quantization (AWQ, GPTQ, GGUF, FP8 E4M3), AirLLM NVMe Streaming, Continuous Batching, KV-Cache Optimization. |
+| **Agent Reliability & RAG** | Attributed Multi-Hop RAG, Claim Decomposition, NLI Cross-Encoders (DeBERTa-v3), Selective Abstention Contracts, Qdrant (Hybrid Dense/BM25 RRF), FlashRank Re-ranking. |
+| **AI Security & Red-Teaming** | Information Flow Control (IFC), Dynamic Taint Tracking, Join Semi-Lattices, AST Policy Enforcement (`ast`, `sqlglot`, `bashlex`), PyRIT Mutations, AgentDojo Benchmarks, HMAC-SHA256 HITL Gating. |
+| **Backend & Infrastructure** | Python 3.11+, C++, FastAPI, Pydantic v2, Docker, Linux (Ubuntu/POSIX), Cloudflare Zero-Trust Tunnels, Pytest (89+ Automated Regression Tests). |
+| **Frontend & Telemetry** | Next.js 14 LTS, TypeScript, Tailwind CSS, Dynamic SVG Lineage DAGs, WebSockets, Lucide Icons. |
 
 ---
 
-## Communities
+## 🇨🇦 Why Canadian AI Scale-Ups? (The Remote Value Proposition)
 
-**School of AI Algiers**
-Active member; involved in AI learning, research, and technical projects.
+I am specifically seeking **Remote AI Systems Engineer, LLMOps Infrastructure, or Applied ML Internships / B2B Contractor roles** with high-growth Canadian AI startups (Toronto, Montreal, Waterloo, Vancouver):
 
-**Micro Club USTHB**
-Active member; participated in software development and technical initiatives.
-
-**GDG Algiers**
-Active member; participated in developer community activities and technical events.
+1. **4-Hour Daily Synchronous Overlap with EST:** Based in Algiers (`UTC+1`), my core working hours provide **4 full synchronous hours with Toronto/Montreal (8:00 AM – 12:00 PM EST)**, paired with uninterrupted afternoon blocks for deep systems development.
+2. **Empirical Engineering vs. Toy Wrappers:** I do not build generic API-wrapper chatbots. Every project in my portfolio is an engineered engine backed by passing automated test suites, mathematical formalisms, and live interactive production deployments.
+3. **Lean Resource Efficiency:** Proven track record of squeezing maximum throughput, zero-trust security, and attribution accuracy out of consumer hardware (RTX 4060 8GB) without requiring $50k/month cloud GPU clusters.
 
 ---
 
-## Currently Open To
+## 📬 Get In Touch
 
-AI Engineering Internships
-Machine Learning Internships
-Applied AI Research Opportunities
-Open-Source AI Collaborations
-Remote AI Engineering Opportunities
-
----
-
-## Connect
-
-[LinkedIn](https://www.linkedin.com/in/hamza-riadh-h-44a297345/)
-
-[GitHub](https://github.com/Hamza-HATTAB)
+* **Email:** [hhamzariadh@gmail.com](mailto:hhamzariadh@gmail.com)
+* **LinkedIn:** [linkedin.com/in/hamza-riadh-h-44a297345](https://www.linkedin.com/in/hamza-riadh-h-44a297345/)
+* **GitHub:** [github.com/Hamza-HATTAB](https://github.com/Hamza-HATTAB)
+* **Location:** Algiers, Algeria (Open to Remote Worldwide · Direct EST Collaboration)
 
 ---
-
-> Building intelligent systems, one project at a time.
+<div align="center">
+<sub>Built with precision. Engineered outside the model.</sub>
+</div>
