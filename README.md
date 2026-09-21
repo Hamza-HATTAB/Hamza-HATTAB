@@ -6,8 +6,9 @@
 
 [![Email](https://img.shields.io/badge/Email-hamza.riadh.htb%40gmail.com-ea4335?style=flat-square&logo=gmail&logoColor=white)](mailto:hamza.riadh.htb@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Hamza_Hattab-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hamza-riadh-h-44a297345/)
+[![Location](https://img.shields.io/badge/Location-Algiers%20(UTC%2B1%20·%204h%20EST%20Overlap)-1f2937?style=flat-square)](https://time.is/EST)
 
-*Computer Science Engineering student specializing in Artificial Intelligence at USTHB (Algiers). Focused on building deterministic reference monitors for autonomous agents, high-throughput speculative LLM serving on constrained hardware, and claim-level attributed multi-hop RAG architectures.*
+*AI Engineering student at USTHB (Algiers). Focused on building deterministic reference monitors for autonomous agents, high-throughput speculative LLM serving on constrained hardware, and claim-level attributed multi-hop RAG architectures.*
 
 </div>
 
@@ -33,7 +34,8 @@ Autonomous AI systems cannot be built with stochastic prompt engineering alone. 
 
 **Deterministic Information Flow Control (IFC), Dynamic Taint Tracking & Adaptive Red-Teaming for Tool-Calling Agents.**
 
-* **Architecture & Mechanism:** An out-of-band reference monitor intercepting all tool invocations before execution. Tracks data provenance across token slices using a formal join semi-lattice (`SANITIZED < TRUSTED < RESTRICTED < UNTRUSTED < ADVERSARIAL`), enforces AST-level constraints (`ast`, `sqlglot`, `bashlex`), and gates irreversible operations behind cryptographic HMAC-SHA256 human-in-the-loop sign-offs.
+* **Engineering Challenge:** In-model prompt guardrails inevitably fail against indirect prompt injections and data poisoning attacks. Autonomous enterprise agents require non-bypassable, deterministic reference monitors.
+* **Systems Architecture:** An out-of-band reference monitor intercepting all tool invocations before execution. Tracks data provenance across token slices using a formal join semi-lattice (`SANITIZED < TRUSTED < RESTRICTED < UNTRUSTED < ADVERSARIAL`), enforces AST-level constraints (`ast`, `sqlglot`, `bashlex`), and gates irreversible operations behind cryptographic HMAC-SHA256 human-in-the-loop sign-offs.
 * **Empirical Benchmarks:**
   * **0.0% Attack Success Rate (ASR):** Neutralized 36 of 36 AgentDojo threat vectors and PyRIT adaptive mutations (Base64 split, ISO-27001 drills, tag escaping).
   * **100.0% Benign Utility:** Zero false-positive halts on enterprise workflows.
@@ -48,7 +50,8 @@ Autonomous AI systems cannot be built with stochastic prompt engineering alone. 
 
 **Sub-8GB VRAM Reasoning Distillation, 5-Way Quantization Bake-Off & AirLLM 70B Layer-Wise NVMe Streaming.**
 
-* **Architecture & Mechanism:** A hardware-aware serving engine engineered for an 8GB RTX 4060 GPU. Implements exact rejection-sampling speculative decoding (K=3) with LoRA-distilled draft models, continuous batching, a 5-way quantization comparison (AWQ, GPTQ, GGUF, FP8 E4M3, FP16), and AirLLM layer-wise NVMe streaming for 70B parameter models.
+* **Engineering Challenge:** Serving frontier reasoning models (DeepSeek-R1 / Qwen2.5) locally requires expensive enterprise clusters (A100/H100), exceeding the budgets of edge deployments and lean infrastructure.
+* **Systems Architecture:** A hardware-aware serving engine engineered for an 8GB RTX 4060 GPU. Implements exact rejection-sampling speculative decoding (K=3) with LoRA-distilled draft models, continuous batching, a 5-way quantization comparison (AWQ, GPTQ, GGUF, FP8 E4M3, FP16), and AirLLM layer-wise NVMe streaming for 70B parameter models.
 * **Empirical Benchmarks:**
   * **1.92x Generation Speedup:** 72.4 tokens/second on mathematical reasoning trajectories (GSM8K).
   * **Strict Memory Safety Guard:** Enforces an invariant ceiling of **<6.8 GB VRAM** to prevent out-of-memory kernel faults.
@@ -63,7 +66,8 @@ Autonomous AI systems cannot be built with stochastic prompt engineering alone. 
 
 **Claim-Level Decomposition, CPU DeBERTa-v3 Cross-Encoder Verification & 3-State Selective Abstention.**
 
-* **Architecture & Mechanism:** An attributed agentic research system that decomposes generated hypotheses into atomic assertions. Evaluates claims via a two-stage verification pipeline (deterministic numerical/temporal regex guard + calibrated DeBERTa-v3 NLI cross-encoder at tau >= 0.82) and enforces a 3-state selective prediction policy contract (`FULL_PASS`, `PARTIAL_PASS` with graceful claim pruning, or `ABSTAIN`).
+* **Engineering Challenge:** Standard RAG pipelines suffer from silent multi-hop hallucinations when questions require cross-document reasoning or when evidence is missing.
+* **Systems Architecture:** An attributed agentic research system that decomposes generated hypotheses into atomic assertions. Evaluates claims via a two-stage verification pipeline (deterministic numerical/temporal regex guard + calibrated DeBERTa-v3 NLI cross-encoder at tau >= 0.82) and enforces a 3-state selective prediction policy contract (`FULL_PASS`, `PARTIAL_PASS` with graceful claim pruning, or `ABSTAIN`).
 * **Empirical Benchmarks:**
   * **Selective Abstention:** Eliminates unsupported assertions across 200 HotpotQA evaluation questions via formal refusal rather than ungrounded extrapolation.
   * **Zero-VRAM CPU Verifier:** DeBERTa cross-encoder evaluates on pure CPU in **689 ms**, preserving 100% GPU VRAM for generation.
