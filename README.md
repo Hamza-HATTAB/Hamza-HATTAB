@@ -2,8 +2,8 @@
 
 <div align="center">
 
-### **AI Systems & Machine Learning Engineer**
-*Agentic Reliability · Multimodal Perception & Grounding · Autonomous Agent Security*
+### AI Systems & Machine Learning Engineer
+**Agentic Reliability · Multimodal Perception & Grounding · Autonomous Agent Security**
 
 [![WARRANT Demo](https://img.shields.io/badge/Live_Demo-WARRANT_RAG-10b981?style=flat-square&logo=vercel&logoColor=white)](https://warrant-hamza-riadh-s-projects.vercel.app/)
 [![INTERPOSE Demo](https://img.shields.io/badge/Live_Demo-INTERPOSE_Security-6366f1?style=flat-square&logo=vercel&logoColor=white)](https://interpose.vercel.app/)
@@ -16,18 +16,18 @@
 
 ---
 
-## ⚡ Engineering Thesis
+## Systems Engineering Focus
 
-> **Autonomous AI systems cannot be built with stochastic prompt engineering alone.** Production deployment requires deterministic out-of-band verification, real-time multimodal perception grounding, and non-bypassable security reference monitors outside the model weights.
+> Autonomous AI systems cannot be built with stochastic prompt engineering alone. Production reliability requires deterministic out-of-band verification, real-time multimodal perception grounding, and non-bypassable security reference monitors outside the model weights.
 
-My work focuses on bridging the gap between frontier foundation models and mission-critical production systems:
-1. **Attributed Agentic RAG & NLI Fact Verification**: Eliminating multi-hop hallucination loops via fine-grained atomic claim decomposition, calibrated cross-encoders ($\tau \ge 0.82$), and formal 3-state selective abstention.
-2. **Real-Time Multimodal Speech-to-Mask Grounding**: Translating continuous vocal queries into temporal pixel segmentation masks via decoupled Whisper STT, Swin-T cross-attention, and SAM 2 video memory propagation.
-3. **Autonomous Agent Security & Deterministic Reference Monitors**: Gating multi-agent tool execution loops with out-of-band AST taint tracking and join semi-lattice information flow control (0.0% ASR on AgentDojo).
+My work bridges foundation model capabilities and production engineering constraints across three core areas:
+1. **Attributed Agentic RAG & Fact Verification:** Eliminating multi-hop hallucination loops via fine-grained atomic claim decomposition, calibrated DeBERTa-v3 cross-encoders ($\tau \ge 0.82$), and formal 3-state selective abstention.
+2. **Real-Time Multimodal Speech-to-Mask Grounding:** Translating continuous vocal queries into temporal pixel segmentation masks via decoupled Whisper STT, Swin-T cross-attention, and SAM 2 video memory propagation.
+3. **Autonomous Agent Security & Deterministic Reference Monitors:** Gating multi-agent tool execution loops with out-of-band AST taint tracking and join semi-lattice information flow control (0.0% ASR on AgentDojo).
 
 ```
 +-------------------------------------------------------------------------------------------------------+
-|                                    CORE SYSTEMS ENGINEERING FLAGSHIPS                                 |
+|                                   APPLIED AI SYSTEMS ARCHITECTURES                                    |
 +-----------------------------------+-----------------------------------+-------------------------------+
 | 1. WARRANT                        | 2. STARK VISION                   | 3. INTERPOSE                  |
 | Attributed Agentic RAG Engine     | Real-Time Multimodal Grounding    | Deterministic Security Monitor|
@@ -38,7 +38,7 @@ My work focuses on bridging the gap between frontier foundation models and missi
 
 ---
 
-## 🚀 Flagship Systems
+## Core Systems & Architectures
 
 ### 1. [WARRANT: Attributed Agentic RAG & Calibrated Fact Verification Engine](https://github.com/Hamza-HATTAB/warrant)
 
@@ -83,7 +83,7 @@ My work focuses on bridging the gap between frontier foundation models and missi
 * **Systems Architecture:**
   * **Decoupled Multimodal Pipeline:** Streams continuous natural vocal instructions through OpenAI Whisper, extracting acoustic tokens with minimal audio chunk latency.
   * **Cross-Modal Attention Grounder:** Fuses visual feature pyramids (Swin-Transformer backbone) with linguistic token projections via multi-scale cross-attention to predict geometric bounding box prompts.
-  * **SAM 2 Temporal Memory Propagation:** Injects predicted bounding boxes as spatial prompts into Meta’s Segment Anything Model 2 (SAM 2) memory-attention mechanism, maintaining pixel-accurate object masks across camera occlusions and continuous 30 FPS video feeds.
+  * **SAM 2 Temporal Memory Propagation:** Injects predicted bounding boxes as spatial prompts into Meta's Segment Anything Model 2 (SAM 2) memory-attention mechanism, maintaining pixel-accurate object masks across camera occlusions and continuous 30 FPS video feeds.
 * **Engineering Highlights:**
   * Modular design decoupling speech recognition, vision-language grounding, and temporal mask propagation to enable independent model upgrades without full pipeline retraining.
   * Optimized for edge inference on consumer GPU hardware with low-latency OpenCV video streaming.
@@ -117,36 +117,36 @@ My work focuses on bridging the gap between frontier foundation models and missi
 
 ---
 
-## 💼 Applied AI Research & Industry Experience
+## Applied AI Research & Engineering Experience
 
 ### **Open-Source ML Systems Contributor** | [Awras AI](https://awras.site/en)
-*Low-Resource Language Model Pretraining & SFT Infrastructure · 2025 -- Present*
+*Low-Resource Language Model Pretraining & SFT Infrastructure (2025 -- Present)*
 * Engineered distributed data cleaning, deduplication, and quality filters for 100K+ token Algerian Darija and dialectal Arabic datasets, eliminating token fragmentation and dialect representation bias.
 * Built end-to-end data processing pipelines and supervised fine-tuning (SFT) workflows on Transformer architectures, standardizing semantic consistency and factual accuracy evaluation benchmarks.
 
 ### **AI Research Fellow** | [School of AI Algiers](https://github.com/SchoolofAI-Algiers)
-*LLM-Guided Reinforcement Learning for MuJoCo Humanoid-v4 · 2023 -- Present*
+*LLM-Guided Reinforcement Learning for MuJoCo Humanoid-v4 (2023 -- Present)*
 * Developed an LLM-assisted RL framework coupling a foundation model with Soft Actor-Critic (SAC) to automate iterative reward-function synthesis and refinement for obstacle navigation in MuJoCo Humanoid-v4.
 * Achieved a **32% increase in episodic return** (3,290 to 4,350), boosted obstacle avoidance success from **38% to 69%**, and reduced collision rates from **51% to 24%** across 3 random seeds compared to hand-tuned baselines.
-* 📄 **Research Poster:** [Read the full research paper poster (PDF)](https://github.com/Hamza-HATTAB/llm-guided-reward-rl/blob/main/docs/poster.pdf)
+* **Research Paper Poster:** [Download Poster (PDF)](https://github.com/Hamza-HATTAB/llm-guided-reward-rl/blob/main/docs/poster.pdf)
 
 ### **Machine Learning Systems Intern** | Ericsson Algeria
-*Industrial Telecommunications Applied AI · Jul 2025 -- Aug 2025 · Algiers, Algeria*
+*Industrial Telecommunications Applied AI (Jul 2025 -- Aug 2025 · Algiers, Algeria)*
 * Engineered machine learning and computer vision pipelines for industrial telecom infrastructure datasets, executing automated feature extraction, data preprocessing, and model validation.
 * Conducted comparative performance benchmarks across statistical ML and deep neural network baselines to evaluate operational classification accuracy and inference efficiency.
 
 ---
 
-## 📜 Verified Certifications & Foundations
+## Professional Certifications
 
 * **[Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning)** — DeepLearning.AI & Andrew Ng
-  * *Curriculum*: Neural Networks & Deep Learning, Structuring ML Projects, Convolutional Neural Networks (CNNs), Sequence Models & Attention Mechanisms, Hyperparameter Tuning & Regularization.
-* **[Machine Learning Specialization](https://www.coursera.org/specializations/machine-learning-introduction)** — Stanford Online & DeepLearning.AI (Andrew Ng)
-  * *Curriculum*: Supervised Machine Learning (Regression & Classification), Advanced Learning Algorithms, Unsupervised Learning, Recommenders & Reinforcement Learning.
+  * *Focus:* Deep Neural Networks, Convolutional Neural Networks (CNNs), Sequence Models & Attention Mechanisms, Hyperparameter Tuning & Optimization.
+* **[Machine Learning Specialization](https://www.coursera.org/specializations/machine-learning-introduction)** — Stanford Online & DeepLearning.AI
+  * *Focus:* Supervised Learning, Advanced Learning Algorithms, Unsupervised Learning, Recommender Systems, Reinforcement Learning.
 
 ---
 
-## 🛠️ Technical Arsenal & Production Stack
+## Technical Arsenal & Production Stack
 
 | Engineering Domain | Production Technologies & Tooling |
 | :--- | :--- |
@@ -159,17 +159,17 @@ My work focuses on bridging the gap between frontier foundation models and missi
 
 ---
 
-## 🎓 Education & Community Leadership
+## Education & Technical Community
 
 * **University of Science and Technology Houari Boumediene (USTHB)** | *Bab Ezzouar, Algiers*
   * **State Engineering Degree (Diplôme d'Ingénieur d'État) in Computer Science** — *Artificial Intelligence Specialization*
-  * *Coursework*: Deep Learning, Machine Learning, Computer Vision, Natural Language Processing, Distributed Systems, High-Performance Computing, Advanced Algorithms.
-* **Micro Club USTHB** (2024 -- Present): Member & AI Workshop Contributor — Leading technical sessions on open-source machine learning pipelines, algorithmic problem solving, and hackathons.
+  * *Coursework:* Deep Learning, Machine Learning, Computer Vision, Natural Language Processing, Distributed Systems, High-Performance Computing, Advanced Algorithms.
+* **Micro Club USTHB** (2024 -- Present): Member & AI Workshop Contributor — Leading technical sessions on open-source machine learning pipelines, algorithmic problem solving, and student hackathons.
 * **Google Developer Groups (GDG) Algiers** (2024 -- Present): Active member & technical contributor in AI meetups and DevFests.
 
 ---
 
-## 🌐 Connect & Collaborate
+## Contact & Collaboration
 
 <div align="center">
 
@@ -177,6 +177,6 @@ My work focuses on bridging the gap between frontier foundation models and missi
 [![Email](https://img.shields.io/badge/Email-hamza.riadh.htb%40gmail.com-ea4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hamza.riadh.htb@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-Hamza--HATTAB-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Hamza-HATTAB)
 
-*Open to technical deep-dives, research collaborations, and high-impact AI systems engineering challenges.*
+*Open to technical deep-dives, research collaborations, and production AI systems engineering challenges.*
 
 </div>
