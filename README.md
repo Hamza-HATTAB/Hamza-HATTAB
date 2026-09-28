@@ -1,89 +1,182 @@
-# Hamza HATTAB
+# Hamza Riadh HATTAB
 
 <div align="center">
 
-### **AI Systems Engineer | Applied Machine Learning & Agent Infrastructure**
+### **AI Systems & Machine Learning Engineer**
+*Agentic Reliability · Multimodal Perception & Grounding · Autonomous Agent Security*
 
+[![WARRANT Demo](https://img.shields.io/badge/Live_Demo-WARRANT_RAG-10b981?style=flat-square&logo=vercel&logoColor=white)](https://warrant-hamza-riadh-s-projects.vercel.app/)
+[![INTERPOSE Demo](https://img.shields.io/badge/Live_Demo-INTERPOSE_Security-6366f1?style=flat-square&logo=vercel&logoColor=white)](https://interpose.vercel.app/)
+[![Research Poster](https://img.shields.io/badge/Research_Poster-MuJoCo_RL-e11d48?style=flat-square&logo=adobeacrobatreader&logoColor=white)](https://github.com/Hamza-HATTAB/llm-guided-reward-rl/blob/main/docs/poster.pdf)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Hamza_Riadh_Hattab-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hamza-riadh-h-44a297345/)
 [![Email](https://img.shields.io/badge/Email-hamza.riadh.htb%40gmail.com-ea4335?style=flat-square&logo=gmail&logoColor=white)](mailto:hamza.riadh.htb@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Hamza_Hattab-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hamza-riadh-h-44a297345/)
-[![Location](https://img.shields.io/badge/Location-Algiers%20(UTC%2B1%20·%204h%20EST%20Overlap)-1f2937?style=flat-square)](https://time.is/EST)
-
-*AI Engineering student at USTHB (Algiers). Focused on building deterministic reference monitors for autonomous agents, high-throughput speculative LLM serving on constrained hardware, and claim-level attributed multi-hop RAG architectures.*
+[![Location](https://img.shields.io/badge/Location-Algiers%20(UTC%2B1)-1f2937?style=flat-square)](https://time.is/Algiers)
 
 </div>
 
 ---
 
-## Core Systems Engineering Flagships
+## ⚡ Engineering Thesis
 
-Autonomous AI systems cannot be built with stochastic prompt engineering alone. My work bridges low-level hardware constraints (RTX 4060 8GB GPU), deterministic reference monitors outside the model, and formal information flow control.
+> **Autonomous AI systems cannot be built with stochastic prompt engineering alone.** Production deployment requires deterministic out-of-band verification, real-time multimodal perception grounding, and non-bypassable security reference monitors outside the model weights.
+
+My work focuses on bridging the gap between frontier foundation models and mission-critical production systems:
+1. **Attributed Agentic RAG & NLI Fact Verification**: Eliminating multi-hop hallucination loops via fine-grained atomic claim decomposition, calibrated cross-encoders ($\tau \ge 0.82$), and formal 3-state selective abstention.
+2. **Real-Time Multimodal Speech-to-Mask Grounding**: Translating continuous vocal queries into temporal pixel segmentation masks via decoupled Whisper STT, Swin-T cross-attention, and SAM 2 video memory propagation.
+3. **Autonomous Agent Security & Deterministic Reference Monitors**: Gating multi-agent tool execution loops with out-of-band AST taint tracking and join semi-lattice information flow control (0.0% ASR on AgentDojo).
 
 ```
-+----------------------------------------------------------------------------------------+
-|                              APPLIED AI SYSTEMS ARCHITECTURE                           |
-+------------------------------+------------------------------+--------------------------+
-| 1. WARRANT                   | 2. OPTISERVE                 | 3. INTERPOSE             |
-| Agentic RAG & Attributed NLI | PyTorch LLM Inference Engine | Deterministic AI Monitor |
-| Reliability & Attribution    | Acceleration & Distillation  | Dynamic Taint & Security |
-+------------------------------+------------------------------+--------------------------+
++-------------------------------------------------------------------------------------------------------+
+|                                    CORE SYSTEMS ENGINEERING FLAGSHIPS                                 |
++-----------------------------------+-----------------------------------+-------------------------------+
+| 1. WARRANT                        | 2. STARK VISION                   | 3. INTERPOSE                  |
+| Attributed Agentic RAG Engine     | Real-Time Multimodal Grounding    | Deterministic Security Monitor|
+| Claim Decomp & DeBERTa-v3 NLI     | Streaming Whisper + Swin-T + SAM 2| Dynamic AST Taint Tracking    |
+| [100% Precision / 89 Tests]       | [30 FPS Mask Propagation]         | [0.0% ASR / 0.038ms Latency]  |
++-----------------------------------+-----------------------------------+-------------------------------+
 ```
 
 ---
 
-### 1. [INTERPOSE: Deterministic Security Reference Monitor for AI Agents](https://github.com/Hamza-HATTAB/interpose)
+## 🚀 Flagship Systems
 
-**Deterministic Information Flow Control (IFC), Dynamic Taint Tracking & Adaptive Red-Teaming for Tool-Calling Agents.**
+### 1. [WARRANT: Attributed Agentic RAG & Calibrated Fact Verification Engine](https://github.com/Hamza-HATTAB/warrant)
 
-* **Engineering Challenge:** In-model prompt guardrails inevitably fail against indirect prompt injections and data poisoning attacks. Autonomous enterprise agents require non-bypassable, deterministic reference monitors.
-* **Systems Architecture:** An out-of-band reference monitor intercepting all tool invocations before execution. Tracks data provenance across token slices using a formal join semi-lattice (`SANITIZED < TRUSTED < RESTRICTED < UNTRUSTED < ADVERSARIAL`), enforces AST-level constraints (`ast`, `sqlglot`, `bashlex`), and gates irreversible operations behind cryptographic HMAC-SHA256 human-in-the-loop sign-offs.
+<div align="left">
+
+[![Live Demo](https://img.shields.io/badge/Live_System-warrant--alpha.vercel.app-10b981?style=flat-square&logo=vercel)](https://warrant-hamza-riadh-s-projects.vercel.app/)
+[![Repository](https://img.shields.io/badge/Repository-Hamza--HATTAB%2Fwarrant-181717?style=flat-square&logo=github)](https://github.com/Hamza-HATTAB/warrant)
+[![Regression Tests](https://img.shields.io/badge/Automated_Tests-89_Passing-brightgreen?style=flat-square&logo=pytest)](https://github.com/Hamza-HATTAB/warrant)
+[![NLI Verifier](https://img.shields.io/badge/Verifier-DeBERTa--v3--large_NLI-blue?style=flat-square)](https://huggingface.co/cross-encoder/nli-deberta-v3-large)
+[![Vector Engine](https://img.shields.io/badge/Vector_DB-Qdrant_Hybrid_RRF-red?style=flat-square&logo=qdrant)](https://qdrant.tech/)
+
+</div>
+
+* **The Problem:** Standard RAG pipelines suffer from silent multi-hop hallucinations when questions require complex cross-document reasoning or when retrieved context is incomplete or adversarial.
+* **Systems Architecture:**
+  * **Atomic Claim Decomposition:** Parses complex model outputs into discrete, verifiable factual propositions.
+  * **Deterministic Regex Guard:** Fast-path pre-validation of numerical, temporal, and entity constraints before neural evaluation.
+  * **Calibrated DeBERTa-v3 Cross-Encoder:** NLI cross-encoder scoring claim entailment against retrieved context at an empirically calibrated threshold ($\tau \ge 0.82$).
+  * **Cyclic LangGraph State Machine:** Enforces a 3-state selective prediction contract (`FULL_PASS`, `PARTIAL_PASS` with claim pruning, or `ABSTAIN`), formally refusing ungrounded extrapolation.
+  * **Hybrid Dense/Sparse Retrieval:** Qdrant vector indexing combining dense semantic embeddings with sparse BM25 Reciprocal Rank Fusion (RRF) and sub-token citation DAGs.
 * **Empirical Benchmarks:**
-  * **0.0% Attack Success Rate (ASR):** Neutralized 36 of 36 AgentDojo threat vectors and PyRIT adaptive mutations (Base64 split, ISO-27001 drills, tag escaping).
-  * **100.0% Benign Utility:** Zero false-positive halts on enterprise workflows.
+  * **Zero Hallucination Extrapolations:** Enforces formal abstention across 200 HotpotQA evaluation questions rather than emitting unsupported claims.
+  * **Zero-VRAM CPU Verifier:** DeBERTa cross-encoder evaluates on pure CPU in **689 ms**, preserving GPU memory entirely for high-throughput generation.
+  * **Automated Reliability:** Backed by an **89-test automated regression suite** covering edge-case token splits, contradiction pruning, and cyclical graph states.
+* **Tech Stack:** Python 3.11, PyTorch, Hugging Face Transformers, DeBERTa-v3-large, Qdrant, LangGraph, FlashRank, FastAPI, Next.js 14, Docker.
+
+---
+
+### 2. [STARK VISION: Real-Time Multimodal Speech-to-Mask Grounding Engine](https://github.com/Hamza-HATTAB)
+
+<div align="left">
+
+[![Status](https://img.shields.io/badge/Status-In_Active_Development-orange?style=flat-square)]()
+[![Affiliation](https://img.shields.io/badge/Research-School_of_AI_Algiers-blueviolet?style=flat-square)](https://github.com/SchoolofAI-Algiers)
+[![Perception](https://img.shields.io/badge/Vision_Backbone-SAM_2_%2B_Swin--T-blue?style=flat-square)](https://github.com/facebookresearch/segment-anything-2)
+[![Speech](https://img.shields.io/badge/Speech_Recognition-Streaming_Whisper-brightgreen?style=flat-square)](https://github.com/openai/whisper)
+[![Framework](https://img.shields.io/badge/Framework-PyTorch_%2B_OpenCV-ee4c2c?style=flat-square&logo=pytorch)](https://pytorch.org/)
+
+</div>
+
+* **The Problem:** Existing referring video object segmentation models struggle with latency and temporal drift when operators use continuous, real-time vocal commands rather than static text queries.
+* **Systems Architecture:**
+  * **Decoupled Multimodal Pipeline:** Streams continuous natural vocal instructions through OpenAI Whisper, extracting acoustic tokens with minimal audio chunk latency.
+  * **Cross-Modal Attention Grounder:** Fuses visual feature pyramids (Swin-Transformer backbone) with linguistic token projections via multi-scale cross-attention to predict geometric bounding box prompts.
+  * **SAM 2 Temporal Memory Propagation:** Injects predicted bounding boxes as spatial prompts into Meta’s Segment Anything Model 2 (SAM 2) memory-attention mechanism, maintaining pixel-accurate object masks across camera occlusions and continuous 30 FPS video feeds.
+* **Engineering Highlights:**
+  * Modular design decoupling speech recognition, vision-language grounding, and temporal mask propagation to enable independent model upgrades without full pipeline retraining.
+  * Optimized for edge inference on consumer GPU hardware with low-latency OpenCV video streaming.
+* **Tech Stack:** PyTorch, Whisper STT, SAM 2 (Segment Anything), Swin-T, Hugging Face Transformers, OpenCV, FastAPI, Python 3.11.
+
+---
+
+### 3. [INTERPOSE: Autonomous Agent Security & Deterministic Reference Monitor](https://github.com/Hamza-HATTAB/interpose)
+
+<div align="left">
+
+[![Live Demo](https://img.shields.io/badge/Live_System-interpose.vercel.app-6366f1?style=flat-square&logo=vercel)](https://interpose.vercel.app/)
+[![Repository](https://img.shields.io/badge/Repository-Hamza--HATTAB%2Finterpose-181717?style=flat-square&logo=github)](https://github.com/Hamza-HATTAB/interpose)
+[![Attack Success Rate](https://img.shields.io/badge/Attack_Success_Rate-0.0%25-success?style=flat-square)]()
+[![Benchmark](https://img.shields.io/badge/Benchmark-AgentDojo_36%2F36-purple?style=flat-square)](https://github.com/Hamza-HATTAB/interpose)
+[![Overhead](https://img.shields.io/badge/Overhead-0.038ms-yellow?style=flat-square)]()
+
+</div>
+
+* **The Problem:** Stochastic in-model guardrails inevitably fail against indirect prompt injection, tool jailbreaks, and data poisoning attacks. Autonomous agents require non-bypassable, deterministic reference monitors outside the model.
+* **Systems Architecture:**
+  * **Out-of-Band Execution Interceptor:** Sits directly between the LLM agent reasoning loop and system tool invocation APIs, validating every call before execution.
+  * **Dynamic AST Taint Tracking:** Tracks data provenance across token slices using a formal join semi-lattice (`SANITIZED < TRUSTED < RESTRICTED < UNTRUSTED < ADVERSARIAL`).
+  * **Deterministic AST Policy Enforcement:** Syntactically inspects payloads using Python `ast`, `sqlglot`, and `bashlex` to block unauthorized file writes, shell escapes, and SQL injection vectors.
+  * **Cryptographic Human-in-the-Loop Gating:** Irreversible system operations (e.g., database deletions, balance transfers) trigger HMAC-SHA256 authenticated human sign-offs.
+* **Empirical Benchmarks:**
+  * **0.0% Attack Success Rate (ASR):** Neutralized 36 of 36 AgentDojo threat vectors and adaptive PyRIT mutations (Base64 splitting, ISO-27001 drills, markdown tag escaping).
+  * **100.0% Benign Utility:** Zero false-positive halts on production enterprise workflows.
   * **Sub-Millisecond Overhead:** Mean evaluation latency of **0.038 ms** with pure CPU AST parsing.
-* **Live System HUD:** [interpose.vercel.app](https://interpose.vercel.app/)
-* **Repository:** [github.com/Hamza-HATTAB/interpose](https://github.com/Hamza-HATTAB/interpose)
-* **Stack:** Python 3.13, FastAPI, PyRIT, AgentDojo, AST Parsing, Next.js 14, Tailwind CSS.
+* **Tech Stack:** Python 3.13, FastAPI, PyRIT, AgentDojo, AST Parsing, SQLGlot, Next.js 14, Tailwind CSS, Docker.
 
 ---
 
-### 2. [OPTISERVE: PyTorch Inference Acceleration & Speculative Decoding Engine](https://github.com/Hamza-HATTAB/optiserve)
+## 💼 Applied AI Research & Industry Experience
 
-**Sub-8GB VRAM Reasoning Distillation, 5-Way Quantization Bake-Off & AirLLM 70B Layer-Wise NVMe Streaming.**
+### **Open-Source ML Systems Contributor** | [Awras AI](https://awras.site/en)
+*Low-Resource Language Model Pretraining & SFT Infrastructure · 2025 -- Present*
+* Engineered distributed data cleaning, deduplication, and quality filters for 100K+ token Algerian Darija and dialectal Arabic datasets, eliminating token fragmentation and dialect representation bias.
+* Built end-to-end data processing pipelines and supervised fine-tuning (SFT) workflows on Transformer architectures, standardizing semantic consistency and factual accuracy evaluation benchmarks.
 
-* **Engineering Challenge:** Serving frontier reasoning models (DeepSeek-R1 / Qwen2.5) locally requires expensive enterprise clusters (A100/H100), exceeding the budgets of edge deployments and lean infrastructure.
-* **Systems Architecture:** A hardware-aware serving engine engineered for an 8GB RTX 4060 GPU. Implements exact rejection-sampling speculative decoding (K=3) with LoRA-distilled draft models, continuous batching, a 5-way quantization comparison (AWQ, GPTQ, GGUF, FP8 E4M3, FP16), and AirLLM layer-wise NVMe streaming for 70B parameter models.
-* **Empirical Benchmarks:**
-  * **1.92x Generation Speedup:** 72.4 tokens/second on mathematical reasoning trajectories (GSM8K).
-  * **Strict Memory Safety Guard:** Enforces an invariant ceiling of **<6.8 GB VRAM** to prevent out-of-memory kernel faults.
-  * **Zero-Cloud 70B Execution:** Streams 70B weights from NVMe SSD inside **2,150 MB peak VRAM**.
-* **Live System HUD:** [optiserve.vercel.app](https://optiserve.vercel.app/)
-* **Repository:** [github.com/Hamza-HATTAB/optiserve](https://github.com/Hamza-HATTAB/optiserve)
-* **Stack:** PyTorch 2.6, CUDA 12.4, HuggingFace Transformers, BitsAndBytes, AirLLM, Next.js 14.
+### **AI Research Fellow** | [School of AI Algiers](https://github.com/SchoolofAI-Algiers)
+*LLM-Guided Reinforcement Learning for MuJoCo Humanoid-v4 · 2023 -- Present*
+* Developed an LLM-assisted RL framework coupling a foundation model with Soft Actor-Critic (SAC) to automate iterative reward-function synthesis and refinement for obstacle navigation in MuJoCo Humanoid-v4.
+* Achieved a **32% increase in episodic return** (3,290 to 4,350), boosted obstacle avoidance success from **38% to 69%**, and reduced collision rates from **51% to 24%** across 3 random seeds compared to hand-tuned baselines.
+* 📄 **Research Poster:** [Read the full research paper poster (PDF)](https://github.com/Hamza-HATTAB/llm-guided-reward-rl/blob/main/docs/poster.pdf)
 
----
-
-### 3. [WARRANT: Attributed Multi-Hop Research Agent & Calibrated NLI Gate](https://github.com/Hamza-HATTAB/warrant)
-
-**Claim-Level Decomposition, CPU DeBERTa-v3 Cross-Encoder Verification & 3-State Selective Abstention.**
-
-* **Engineering Challenge:** Standard RAG pipelines suffer from silent multi-hop hallucinations when questions require cross-document reasoning or when evidence is missing.
-* **Systems Architecture:** An attributed agentic research system that decomposes generated hypotheses into atomic assertions. Evaluates claims via a two-stage verification pipeline (deterministic numerical/temporal regex guard + calibrated DeBERTa-v3 NLI cross-encoder at tau >= 0.82) and enforces a 3-state selective prediction policy contract (`FULL_PASS`, `PARTIAL_PASS` with graceful claim pruning, or `ABSTAIN`).
-* **Empirical Benchmarks:**
-  * **Selective Abstention:** Eliminates unsupported assertions across 200 HotpotQA evaluation questions via formal refusal rather than ungrounded extrapolation.
-  * **Zero-VRAM CPU Verifier:** DeBERTa cross-encoder evaluates on pure CPU in **689 ms**, preserving 100% GPU VRAM for generation.
-  * **Bidirectional Citation Tracing:** Complete evidence DAG mapping assertions to cited Wikipedia paragraph spans.
-* **Live System HUD:** [warrant-alpha.vercel.app](https://warrant-alpha.vercel.app/)
-* **Repository:** [github.com/Hamza-HATTAB/warrant](https://github.com/Hamza-HATTAB/warrant)
-* **Stack:** Python 3.11, Qdrant Hybrid RRF, FlashRank, Gemma-3, DeBERTa-v3, Next.js 14.
+### **Machine Learning Systems Intern** | Ericsson Algeria
+*Industrial Telecommunications Applied AI · Jul 2025 -- Aug 2025 · Algiers, Algeria*
+* Engineered machine learning and computer vision pipelines for industrial telecom infrastructure datasets, executing automated feature extraction, data preprocessing, and model validation.
+* Conducted comparative performance benchmarks across statistical ML and deep neural network baselines to evaluate operational classification accuracy and inference efficiency.
 
 ---
 
-## Technical Competencies
+## 📜 Verified Certifications & Foundations
 
-| Domain | Systems & Tooling |
+* **[Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning)** — DeepLearning.AI & Andrew Ng
+  * *Curriculum*: Neural Networks & Deep Learning, Structuring ML Projects, Convolutional Neural Networks (CNNs), Sequence Models & Attention Mechanisms, Hyperparameter Tuning & Regularization.
+* **[Machine Learning Specialization](https://www.coursera.org/specializations/machine-learning-introduction)** — Stanford Online & DeepLearning.AI (Andrew Ng)
+  * *Curriculum*: Supervised Machine Learning (Regression & Classification), Advanced Learning Algorithms, Unsupervised Learning, Recommenders & Reinforcement Learning.
+
+---
+
+## 🛠️ Technical Arsenal & Production Stack
+
+| Engineering Domain | Production Technologies & Tooling |
 | :--- | :--- |
-| **Inference & Acceleration** | PyTorch, CUDA, Speculative Decoding (K=3 Rejection Sampling), Quantization (AWQ, GPTQ, GGUF, FP8 E4M3), AirLLM NVMe Streaming, Continuous Batching, KV-Cache Optimization. |
-| **Agent Reliability & RAG** | Attributed Multi-Hop RAG, Claim Decomposition, NLI Cross-Encoders (DeBERTa-v3), Selective Abstention Contracts, Qdrant (Hybrid Dense/BM25 RRF), FlashRank Re-ranking. |
-| **AI Security & Red-Teaming** | Information Flow Control (IFC), Dynamic Taint Tracking, Join Semi-Lattices, AST Policy Enforcement (`ast`, `sqlglot`, `bashlex`), PyRIT Mutations, AgentDojo Benchmarks, HMAC-SHA256 HITL Gating. |
-| **Backend & Infrastructure** | Python 3.11+, C++, FastAPI, Pydantic v2, Docker, Linux (Ubuntu/POSIX), Cloudflare Tunnels, Pytest (89+ Automated Regression Tests). |
-| **Frontend & Telemetry** | Next.js 14 LTS, TypeScript, Tailwind CSS, Dynamic SVG Lineage DAGs, WebSockets. |
+| **Deep Learning & Vision** | **PyTorch**, **Hugging Face Transformers**, **SAM 2 (Segment Anything)**, **Swin-T**, **Whisper STT**, OpenCV, Torchvision, Scikit-Learn |
+| **Agentic Systems & NLP** | **Attributed RAG**, **DeBERTa-v3 NLI**, **LangGraph (Cyclic State Machines)**, **Qdrant (Hybrid Dense/BM25 RRF)**, FlashRank Re-ranking, SpaCy |
+| **AI Security & Guardrails** | **AgentDojo Benchmark**, **Dynamic AST Taint Tracking (`ast`, `sqlglot`)**, Join Semi-Lattices, HMAC-SHA256 HITL Gating, PyRIT |
+| **Backend & Distributed Systems** | **Python 3.11+**, **C++**, **FastAPI**, **Pydantic v2**, PostgreSQL, Redis, Docker, Linux (Ubuntu/POSIX), Git/GitHub CI/CD |
+| **Reliability & Testing** | **Pytest (89+ Automated Regression Test Suites)**, HotpotQA Multi-Hop Evaluation, Semantic Abstention Contracts |
+| **Frontend & Telemetry** | **Next.js 14**, TypeScript, Tailwind CSS, Dynamic Lineage DAGs, WebSockets, Vercel |
+
+---
+
+## 🎓 Education & Community Leadership
+
+* **University of Science and Technology Houari Boumediene (USTHB)** | *Bab Ezzouar, Algiers*
+  * **State Engineering Degree (Diplôme d'Ingénieur d'État) in Computer Science** — *Artificial Intelligence Specialization*
+  * *Coursework*: Deep Learning, Machine Learning, Computer Vision, Natural Language Processing, Distributed Systems, High-Performance Computing, Advanced Algorithms.
+* **Micro Club USTHB** (2024 -- Present): Member & AI Workshop Contributor — Leading technical sessions on open-source machine learning pipelines, algorithmic problem solving, and hackathons.
+* **Google Developer Groups (GDG) Algiers** (2024 -- Present): Active member & technical contributor in AI meetups and DevFests.
+
+---
+
+## 🌐 Connect & Collaborate
+
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Hamza_Riadh_Hattab-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hamza-riadh-h-44a297345/)
+[![Email](https://img.shields.io/badge/Email-hamza.riadh.htb%40gmail.com-ea4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hamza.riadh.htb@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Hamza--HATTAB-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Hamza-HATTAB)
+
+*Open to technical deep-dives, research collaborations, and high-impact AI systems engineering challenges.*
+
+</div>
