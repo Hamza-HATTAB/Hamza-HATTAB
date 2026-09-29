@@ -1,6 +1,6 @@
-# Hamza Riadh HATTAB
-
 <div align="center">
+
+# Hamza Riadh HATTAB
 
 ### AI Systems & Machine Learning Engineer
 **Agentic Reliability · Multimodal Perception & Grounding · Autonomous Agent Security**
