@@ -3,10 +3,9 @@
 # Hamza Riadh HATTAB
 
 ### AI Systems & Machine Learning Engineer
-**Agentic Reliability · Multimodal Perception & Grounding · Autonomous Agent Security**
+**Attributed Agentic RAG · Low-Resource NLP · Multimodal Grounding**
 
 [![WARRANT Demo](https://img.shields.io/badge/Live_Demo-WARRANT_RAG-10b981?style=flat-square&logo=vercel&logoColor=white)](https://warrant-hamza-riadh-s-projects.vercel.app/)
-[![INTERPOSE Demo](https://img.shields.io/badge/Live_Demo-INTERPOSE_Security-6366f1?style=flat-square&logo=vercel&logoColor=white)](https://interpose.vercel.app/)
 [![Research Poster](https://img.shields.io/badge/Research_Poster-MuJoCo_RL-e11d48?style=flat-square&logo=adobeacrobatreader&logoColor=white)](https://github.com/Hamza-HATTAB/llm-guided-reward-rl/blob/main/docs/poster.pdf)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Hamza_Riadh_Hattab-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hamza-riadh-h-44a297345/)
 [![Email](https://img.shields.io/badge/Email-hamza.riadh.htb%40gmail.com-ea4335?style=flat-square&logo=gmail&logoColor=white)](mailto:hamza.riadh.htb@gmail.com)
@@ -18,9 +17,9 @@
 
 ## Systems Engineering Focus
 
-> Autonomous AI systems cannot be built with stochastic prompt engineering alone. Production reliability requires deterministic out-of-band verification, real-time multimodal perception grounding, and non-bypassable security reference monitors outside the model weights.
+> Production AI reliability requires deterministic out-of-band verification, fine-grained atomic claim decomposition, and real-time multimodal perception grounding.
 
-My work bridges foundation model capabilities and production engineering constraints across three core areas:
+My work bridges foundation model capabilities and production engineering constraints across two core areas:
 1. **Attributed Agentic RAG & Fact Verification:** Eliminating multi-hop hallucination loops via fine-grained atomic claim decomposition, calibrated DeBERTa-v3 cross-encoders ($\tau \ge 0.82$), and formal 3-state selective abstention.
 2. **High-Throughput PyTorch Inference Acceleration:** Accelerating autoregressive token generation via rejection-sampling speculative decoding (1.92x speedup) and single-GPU 70B parameter layer streaming.
 3. **Autonomous Agent Security & Deterministic Reference Monitors:** Gating multi-agent tool execution loops with out-of-band AST taint tracking and join semi-lattice information flow control (0.0% ASR on AgentDojo).
