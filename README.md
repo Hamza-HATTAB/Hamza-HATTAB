@@ -80,13 +80,14 @@ My work bridges foundation model capabilities and production engineering constra
 
 * **The Problem:** Existing referring video object segmentation models struggle with latency and temporal drift when operators use continuous, real-time vocal commands rather than static text queries.
 * **Systems Architecture:**
-  * **Decoupled Multimodal Pipeline:** Streams continuous natural vocal instructions through OpenAI Whisper, extracting acoustic tokens with minimal audio chunk latency.
-  * **Cross-Modal Attention Grounder:** Fuses visual feature pyramids (Swin-Transformer backbone) with linguistic token projections via multi-scale cross-attention to predict geometric bounding box prompts.
-  * **SAM 2 Temporal Memory Propagation:** Injects predicted bounding boxes as spatial prompts into Meta's Segment Anything Model 2 (SAM 2) memory-attention mechanism, maintaining pixel-accurate object masks across camera occlusions and continuous 30 FPS video feeds.
+  * **Decoupled Dual-Loop Pipeline:** Streams continuous natural vocal instructions through OpenAI Whisper, extracting acoustic tokens with minimal audio chunk latency.
+  * **Open-Vocabulary Spatial Grounder:** Integrates Grounding DINO (Swin-T backbone + text-visual cross-attention) to extract open-vocabulary referring expressions and predict geometric bounding box prompts.
+  * **Automated Ambiguity Detection:** Formulates a confidence-delta metric ($\\Delta\\mathrm{score} < 0.15$) to identify semantic multi-target conflicts before spatial initialization, preventing false-positive tracking drift.
+  * **SAM 2 Temporal Memory Propagation:** Injects predicted bounding boxes as spatial prompts into Meta's Segment Anything Model 2 (SAM 2) memory-attention mechanism, maintaining pixel-accurate object masks across camera occlusions at a sustained 30 FPS on an NVIDIA RTX 4060 (8 GB VRAM).
 * **Engineering Highlights:**
-  * Modular design decoupling speech recognition, vision-language grounding, and temporal mask propagation to enable independent model upgrades without full pipeline retraining.
+  * Supported by a custom **13-test automated validation suite** verifying streaming chunk boundaries, ambiguity thresholds, and temporal memory propagation.
   * Optimized for edge inference on consumer GPU hardware with low-latency OpenCV video streaming.
-* **Tech Stack:** PyTorch, Whisper STT, SAM 2 (Segment Anything), Swin-T, Hugging Face Transformers, OpenCV, FastAPI, Python 3.11.
+* **Tech Stack:** Python, PyTorch, CUDA, Grounding DINO, Meta SAM 2, OpenAI Whisper, OpenCV.
 
 ---
 
