@@ -22,17 +22,17 @@
 
 My work bridges foundation model capabilities and production engineering constraints across three core areas:
 1. **Attributed Agentic RAG & Fact Verification:** Eliminating multi-hop hallucination loops via fine-grained atomic claim decomposition, calibrated DeBERTa-v3 cross-encoders ($\tau \ge 0.82$), and formal 3-state selective abstention.
-2. **Real-Time Multimodal Speech-to-Mask Grounding:** Translating continuous vocal queries into temporal pixel segmentation masks via decoupled Whisper STT, Swin-T cross-attention, and SAM 2 video memory propagation.
+2. **High-Throughput PyTorch Inference Acceleration:** Accelerating autoregressive token generation via rejection-sampling speculative decoding (1.92x speedup) and single-GPU 70B parameter layer streaming.
 3. **Autonomous Agent Security & Deterministic Reference Monitors:** Gating multi-agent tool execution loops with out-of-band AST taint tracking and join semi-lattice information flow control (0.0% ASR on AgentDojo).
 
 ```
 +-------------------------------------------------------------------------------------------------------+
 |                                   APPLIED AI SYSTEMS ARCHITECTURES                                    |
 +-----------------------------------+-----------------------------------+-------------------------------+
-| 1. WARRANT                        | 2. STARK VISION                   | 3. INTERPOSE                  |
-| Attributed Agentic RAG Engine     | Real-Time Multimodal Grounding    | Deterministic Security Monitor|
-| Claim Decomp & DeBERTa-v3 NLI     | Streaming Whisper + Swin-T + SAM 2| Dynamic AST Taint Tracking    |
-| [100% Precision / 89 Tests]       | [30 FPS Mask Propagation]         | [0.0% ASR / 0.038ms Latency]  |
+| 1. WARRANT                        | 2. OPTISERVE                      | 3. INTERPOSE                  |
+| Attributed Agentic RAG Engine     | High-Throughput Inference Engine  | Deterministic Security Monitor|
+| Claim Decomp & DeBERTa-v3 NLI     | Speculative Decoding & AirLLM 70B | Dynamic AST Taint Tracking    |
+| [100% Precision / 89 Tests]       | [1.92x Speedup / 5-Way Quant]     | [0.0% ASR / 0.038ms Latency]  |
 +-----------------------------------+-----------------------------------+-------------------------------+
 ```
 
@@ -67,27 +67,28 @@ My work bridges foundation model capabilities and production engineering constra
 
 ---
 
-### 2. [STARK VISION: Real-Time Multimodal Speech-to-Mask Grounding Engine](https://github.com/Hamza-HATTAB)
+### 2. [OPTISERVE: High-Throughput PyTorch Speculative Decoding Engine](https://github.com/Hamza-HATTAB/optiserve)
 
 <div align="left">
 
-[![Status](https://img.shields.io/badge/Status-In_Active_Development-orange?style=flat-square)]()
-[![Affiliation](https://img.shields.io/badge/Research-School_of_AI_Algiers-blueviolet?style=flat-square)](https://github.com/SchoolofAI-Algiers)
-[![Perception](https://img.shields.io/badge/Vision_Backbone-SAM_2_%2B_Swin--T-blue?style=flat-square)](https://github.com/facebookresearch/segment-anything-2)
-[![Speech](https://img.shields.io/badge/Speech_Recognition-Streaming_Whisper-brightgreen?style=flat-square)](https://github.com/openai/whisper)
-[![Framework](https://img.shields.io/badge/Framework-PyTorch_%2B_OpenCV-ee4c2c?style=flat-square&logo=pytorch)](https://pytorch.org/)
+[![Live Demo](https://img.shields.io/badge/Live_System-optiserve.vercel.app-6366f1?style=flat-square&logo=vercel)](https://optiserve.vercel.app/)
+[![Repository](https://img.shields.io/badge/Repository-Hamza--HATTAB%2Foptiserve-181717?style=flat-square&logo=github)](https://github.com/Hamza-HATTAB/optiserve)
+[![Speedup](https://img.shields.io/badge/Speedup-1.92x_Wall--Clock-brightgreen?style=flat-square)]()
+[![Quantization](https://img.shields.io/badge/Quantization_Bake--Off-5--Way_Empirical-blue?style=flat-square)](https://github.com/Hamza-HATTAB/optiserve)
+[![Framework](https://img.shields.io/badge/Framework-PyTorch_%2B_CUDA-ee4c2c?style=flat-square&logo=pytorch)](https://pytorch.org/)
 
 </div>
 
-* **The Problem:** Existing referring video object segmentation models struggle with latency and temporal drift when operators use continuous, real-time vocal commands rather than static text queries.
+* **The Problem:** Memory bandwidth bottlenecks and autoregressive token-by-token generation cap inference throughput on edge and cloud hardware, while large 70B parameter models exceed standard consumer VRAM capacities.
 * **Systems Architecture:**
-  * **Decoupled Multimodal Pipeline:** Streams continuous natural vocal instructions through OpenAI Whisper, extracting acoustic tokens with minimal audio chunk latency.
-  * **Cross-Modal Attention Grounder:** Fuses visual feature pyramids (Swin-Transformer backbone) with linguistic token projections via multi-scale cross-attention to predict geometric bounding box prompts.
-  * **SAM 2 Temporal Memory Propagation:** Injects predicted bounding boxes as spatial prompts into Meta's Segment Anything Model 2 (SAM 2) memory-attention mechanism, maintaining pixel-accurate object masks across camera occlusions and continuous 30 FPS video feeds.
-* **Engineering Highlights:**
-  * Modular design decoupling speech recognition, vision-language grounding, and temporal mask propagation to enable independent model upgrades without full pipeline retraining.
-  * Optimized for edge inference on consumer GPU hardware with low-latency OpenCV video streaming.
-* **Tech Stack:** PyTorch, Whisper STT, SAM 2 (Segment Anything), Swin-T, Hugging Face Transformers, OpenCV, FastAPI, Python 3.11.
+  * **Speculative Decoding Engine:** Pairs a compact draft model (Llama-3.2-1B) with a high-capacity target model (Llama-3.1-8B), using Leviathan modified rejection sampling to guarantee 100% mathematical output distribution equivalence.
+  * **KV-Cache Optimization:** Verifies multi-token draft speculative trees in a single forward pass, reducing memory bandwidth pressure and latency.
+  * **Blockwise Layer-Streaming (AirLLM):** Streams transformer weights layer-by-layer across NVMe-to-PCIe-to-VRAM, enabling local inference of 70B parameter models on a single consumer GPU (RTX 4060, 8GB VRAM).
+  * **Production Telemetry & API:** High-concurrency FastAPI microservice with Server-Sent Events (SSE) streaming and Prometheus latency metrics (P95 TTFT, ITL).
+* **Empirical Benchmarks:**
+  * **1.92× Wall-Clock Speedup:** Realized sustained acceleration over autoregressive baselines on consumer hardware.
+  * **5-Way Quantization Bake-Off:** Comprehensive benchmarking matrix across FP16, AWQ (4-bit), GPTQ (4-bit), GGUF (Q4_K_M), and FP8 (E4M3) on RTX 4060.
+* **Tech Stack:** Python 3.11, PyTorch, CUDA, Hugging Face Transformers, AirLLM, FastAPI, Next.js 14, Tailwind CSS, Docker.
 
 ---
 
