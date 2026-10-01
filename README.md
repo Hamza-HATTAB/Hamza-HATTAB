@@ -31,7 +31,7 @@ My work bridges foundation model capabilities and production engineering constra
 | 1. WARRANT                                        | 2. STARK VISION                                   |
 | Attributed Agentic RAG Engine                     | Real-Time Multimodal Grounding Engine             |
 | Atomic Claim Decomp & DeBERTa-v3 NLI Verification | Continuous Whisper STT + Swin-T + SAM 2 Memory    |
-| [Zero Hallucination / 89 Automated Tests]         | [30 FPS Mask Propagation / Consumer Edge GPU]     |
+| [Zero Hallucination / 37 Automated Tests]         | [30 FPS Mask Propagation / Consumer Edge GPU]     |
 +---------------------------------------------------+---------------------------------------------------+
 ```
 
@@ -45,7 +45,7 @@ My work bridges foundation model capabilities and production engineering constra
 
 [![Live Demo](https://img.shields.io/badge/Live_System-warrant--alpha.vercel.app-10b981?style=flat-square&logo=vercel)](https://warrant-hamza-riadh-s-projects.vercel.app/)
 [![Repository](https://img.shields.io/badge/Repository-Hamza--HATTAB%2Fwarrant-181717?style=flat-square&logo=github)](https://github.com/Hamza-HATTAB/warrant)
-[![Regression Tests](https://img.shields.io/badge/Automated_Tests-89_Passing-brightgreen?style=flat-square&logo=pytest)](https://github.com/Hamza-HATTAB/warrant)
+[![Regression Tests](https://img.shields.io/badge/Automated_Tests-37_Passing-brightgreen?style=flat-square&logo=pytest)](https://github.com/Hamza-HATTAB/warrant)
 [![NLI Verifier](https://img.shields.io/badge/Verifier-DeBERTa--v3--large_NLI-blue?style=flat-square)](https://huggingface.co/cross-encoder/nli-deberta-v3-large)
 [![Vector Engine](https://img.shields.io/badge/Vector_DB-Qdrant_Hybrid_RRF-red?style=flat-square&logo=qdrant)](https://qdrant.tech/)
 
@@ -61,8 +61,8 @@ My work bridges foundation model capabilities and production engineering constra
 * **Empirical Benchmarks:**
   * **Zero Hallucination Extrapolations:** Enforces formal abstention across 200 HotpotQA evaluation questions rather than emitting unsupported claims.
   * **Zero-VRAM CPU Verifier:** DeBERTa cross-encoder evaluates on pure CPU in **689 ms**, preserving GPU memory entirely for high-throughput generation.
-  * **Automated Reliability:** Backed by an **89-test automated regression suite** covering edge-case token splits, contradiction pruning, and cyclical graph states.
-* **Tech Stack:** Python 3.11, PyTorch, Hugging Face Transformers, DeBERTa-v3-large, Qdrant, LangGraph, FlashRank, FastAPI, Next.js 14, Docker.
+  * **Automated Reliability:** Backed by an **37-test automated regression suite** covering edge-case token splits, contradiction pruning, and cyclical graph states.
+* **Tech Stack:** Python 3.11, PyTorch, Hugging Face Transformers, DeBERTa-v3, Qdrant, LangGraph, FlashRank, FastAPI, Next.js 14, Docker.
 
 ---
 
@@ -127,7 +127,7 @@ My work bridges foundation model capabilities and production engineering constra
 | **Agentic Systems & NLP** | **Attributed RAG**, **DeBERTa-v3 NLI**, **LangGraph (Cyclic State Machines)**, **Qdrant (Hybrid Dense/BM25 RRF)**, FlashRank Re-ranking, SpaCy |
 | **AI Security & Guardrails** | **AgentDojo Benchmark**, **Dynamic AST Taint Tracking (`ast`, `sqlglot`)**, Join Semi-Lattices, HMAC-SHA256 HITL Gating, PyRIT |
 | **Backend & Distributed Systems** | **Python 3.11+**, **C++**, **FastAPI**, **Pydantic v2**, PostgreSQL, Redis, Docker, Linux (Ubuntu/POSIX), Git/GitHub CI/CD |
-| **Reliability & Testing** | **Pytest (89+ Automated Regression Test Suites)**, HotpotQA Multi-Hop Evaluation, Semantic Abstention Contracts |
+| **Reliability & Testing** | **Pytest (37+ Automated Regression Test Suites)**, HotpotQA Multi-Hop Evaluation, Semantic Abstention Contracts |
 | **Frontend & Telemetry** | **Next.js 14**, TypeScript, Tailwind CSS, Dynamic Lineage DAGs, WebSockets, Vercel |
 
 ---
