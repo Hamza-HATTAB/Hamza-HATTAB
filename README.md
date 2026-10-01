@@ -93,7 +93,7 @@ My work bridges foundation model capabilities and production engineering constra
 ## Applied AI Research & Engineering Experience
 
 ### **Open-Source ML Systems Contributor** | [Awras AI](https://awras.site/en)
-*Low-Resource Language Model Pretraining & SFT Infrastructure (2025 -- Present)*
+*Low-Resource Language Model Pre-training & SFT Infrastructure (2025 -- Present)*
 * Engineered distributed data cleaning, deduplication, and quality filters for 100K+ token Algerian Darija and dialectal Arabic datasets, eliminating token fragmentation and dialect representation bias.
 * Built end-to-end data processing pipelines and supervised fine-tuning (SFT) workflows on Transformer architectures, standardizing semantic consistency and factual accuracy evaluation benchmarks.
 
