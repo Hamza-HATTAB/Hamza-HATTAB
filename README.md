@@ -91,7 +91,7 @@ My work bridges foundation model capabilities and production engineering constra
 * **Empirical SAM 2.1 GPU Profiling:** Profiled Meta SAM 2.1 (Hiera-Tiny) on an **NVIDIA RTX 4060 Laptop GPU (8 GB VRAM)**. Demonstrated a lightweight 738 MB VRAM footprint, diagnosed sliding-window disk I/O bottlenecks (identifying a 945 ms re-encoding penalty), and engineered in-RAM state-retention specifications.
 * **Rigorous Verification:** Backed by an automated **51-test validation suite** (`pytest`) verifying strict protocol adherence (`HudRenderer`, `RuntimeSnapshot`, `BoundingBox`), NaN box clipping, degenerate geometry protections, and FSM lifecycle transitions.
 
-* **Tech Stack:** Python 3.11, PyTorch, CUDA, Grounding DINO, Meta SAM 2.1, OpenCV, FastAPI, Next.js, WebSockets, NumPy, Pytest.
+* **Tech Stack:** Python 3.11, PyTorch (GPU), Grounding DINO, Meta SAM 2.1, OpenCV, FastAPI, Next.js, WebSockets, NumPy, Pytest.
 ---
 
 ## Applied AI Research & Engineering Experience
