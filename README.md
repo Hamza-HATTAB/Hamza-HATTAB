@@ -66,29 +66,32 @@ My work bridges foundation model capabilities and production engineering constra
 
 ---
 
-### 2. [STARK VISION: Real-Time Multimodal Speech-to-Mask Grounding Engine](https://github.com/Hamza-HATTAB)
+### 2. [STARK VISION: Real-Time Multimodal Speech-to-Mask Grounding Engine](https://github.com/Hamza-HATTAB/see-what-i-say)
 
 <div align="left">
 
 [![Status](https://img.shields.io/badge/Status-In_Active_Development-orange?style=flat-square)]()
 [![Affiliation](https://img.shields.io/badge/Research-School_of_AI_Algiers-blueviolet?style=flat-square)](https://github.com/SchoolofAI-Algiers)
-[![Perception](https://img.shields.io/badge/Vision_Backbone-SAM_2_%2B_Swin--T-blue?style=flat-square)](https://github.com/facebookresearch/segment-anything-2)
+[![Perception](https://img.shields.io/badge/Vision_Backbone-SAM_2.1_%2B_Swin--T-blue?style=flat-square)](https://github.com/facebookresearch/segment-anything-2)
 [![Speech](https://img.shields.io/badge/Speech_Recognition-Streaming_Whisper-brightgreen?style=flat-square)](https://github.com/openai/whisper)
 [![Framework](https://img.shields.io/badge/Framework-PyTorch_%2B_OpenCV-ee4c2c?style=flat-square&logo=pytorch)](https://pytorch.org/)
 
 </div>
 
-* **The Problem:** Existing referring video object segmentation models struggle with latency and temporal drift when operators use continuous, real-time vocal commands rather than static text queries.
-* **Systems Architecture:**
-  * **Decoupled Dual-Loop Pipeline:** Streams continuous natural vocal instructions through OpenAI Whisper, extracting acoustic tokens with minimal audio chunk latency.
-  * **Open-Vocabulary Spatial Grounder:** Integrates Grounding DINO (Swin-T backbone + text-visual cross-attention) to extract open-vocabulary referring expressions and predict geometric bounding box prompts.
-  * **Automated Ambiguity Detection:** Formulates a confidence-delta metric ($\\Delta\\mathrm{score} < 0.15$) to identify semantic multi-target conflicts before spatial initialization, preventing false-positive tracking drift.
-  * **SAM 2 Temporal Memory Propagation:** Injects predicted bounding boxes as spatial prompts into Meta's Segment Anything Model 2 (SAM 2) memory-attention mechanism, maintaining pixel-accurate object masks across camera occlusions at a sustained 30 FPS on an NVIDIA RTX 4060 (8 GB VRAM).
-* **Engineering Highlights:**
-  * Supported by a custom **13-test automated validation suite** verifying streaming chunk boundaries, ambiguity thresholds, and temporal memory propagation.
-  * Optimized for edge inference on consumer GPU hardware with low-latency OpenCV video streaming.
-* **Tech Stack:** Python, PyTorch, CUDA, Grounding DINO, Meta SAM 2, OpenAI Whisper, OpenCV.
+* **The Problem:** Traditional referring video object segmentation models suffer from severe temporal jitter, acoustic token latency, and multi-target ambiguity when operators issue natural vocal commands under dynamic edge-camera conditions.
 
+### Systems Architecture & Technical Implementations
+
+* **Open-Vocabulary Spatial Grounder with DAT:** Integrated Grounding DINO (Swin backbone + text-visual cross-attention) coupled with **Dynamic Adaptive Thresholding (DAT)**. Dynamically scales confidence thresholds based on lexical query complexity and relative score falloff, suppressing hallucinated false positives while catching faint targets.
+* **1-Euro Temporal Centroid Filter:** Eliminated high-frequency bounding box jitter and boundary flickering across continuous frames by applying a 1-Euro adaptive smoothing filter to bounding box centroids, preserving responsiveness during fast motion without lag.
+* **Spatial Disambiguation Engine:** Built a spatial resolver handling multi-target queries with directional heuristics (`"leftmost"`, `"right"`, `"center"`, `"nearest"`) and IoU containment deduplication, triggering automated clarification states when confidence delta falls below threshold ($\Delta\text{score} < 0.15$).
+* **Dual-Mode Decoupled HUD Architecture:**
+  * **Native OpenCV Desktop HUD (`<4 ms` latency):** Renders tactical visor reticles, chamfered glass panels, animated 3D Arc Reactor telemetry, and an in-window non-blocking text console directly via OpenCV (`cv2`), executing at >250 FPS.
+  * **Asynchronous Web HUD:** Built an optional FastAPI WebSocket streaming server coupled with a Next.js / React Canvas frontend, decoupled from core vision loops to prevent rendering stalls.
+* **Empirical SAM 2.1 GPU Profiling:** Profiled Meta SAM 2.1 (Hiera-Tiny) on an **NVIDIA RTX 4060 Laptop GPU (8 GB VRAM)**. Demonstrated a lightweight 738 MB VRAM footprint, diagnosed sliding-window disk I/O bottlenecks (identifying a 945 ms re-encoding penalty), and engineered in-RAM state-retention specifications.
+* **Rigorous Verification:** Backed by an automated **51-test validation suite** (`pytest`) verifying strict protocol adherence (`HudRenderer`, `RuntimeSnapshot`, `BoundingBox`), NaN box clipping, degenerate geometry protections, and FSM lifecycle transitions.
+
+* **Tech Stack:** Python 3.11, PyTorch, CUDA, Grounding DINO, Meta SAM 2.1, OpenCV, FastAPI, Next.js, WebSockets, NumPy, Pytest.
 ---
 
 ## Applied AI Research & Engineering Experience
